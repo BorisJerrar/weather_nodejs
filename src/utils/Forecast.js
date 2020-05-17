@@ -13,7 +13,7 @@ const forcast = (latitude, longitude, callback) => {
         undefined,
         `Weather is ${
           weather[0].main
-        }. It's currently ${Math.round(main.temp - 273.15)}°C. ${visibility > 500 ? "There is a good visibility" : "There is a bad visibility"}`
+        }. It's currently ${Math.round(main.temp - 273.15)}°C.  ${visibility > 500 ? "There is a good visibility" : "There is a bad visibility"} with ${main.humidity}% of humidity.`
       );
     }
   });

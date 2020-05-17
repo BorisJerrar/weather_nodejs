@@ -6,6 +6,7 @@ const forecast = require('./utils/Forecast')
 
 //init ExpressJS
 const app = express();
+const port = process.env.PORT || 3000
 
 //define path for expressJS
 const publicDir = path.join(__dirname, "../public");
@@ -58,6 +59,6 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
   res.render("404", { name: 'Boris Jerrar', title: '404', message: "Ooooh ooohhh, you went to far..." });
 });
-app.listen(3100, () => {
+app.listen(port, () => {
   console.log("SERVER RUNNING ￨ :𝟛𝟘𝟘𝟘");
 });
